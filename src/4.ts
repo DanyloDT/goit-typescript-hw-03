@@ -17,7 +17,7 @@
 
 // Після реалізації всіх класів створіть об'єкти для кожного класу та спробуйте відтворити сценарій, в якому людина приходить додому.
 class Key {
-  constructor(private signature: number = Math.random()) {}
+  private signature: number = Math.random();
   public getSignature(): number {
     return this.signature;
   }
@@ -31,7 +31,7 @@ class Person {
 }
 
 abstract class House {
-  protected door = false;
+  protected door: boolean = false;
   protected tenants: Person[] = [];
 
   constructor(protected key: Key) {}
